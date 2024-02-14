@@ -1,4 +1,5 @@
 <script>
+import { store } from '../store/store'
 
 import AppCard from './AppCard.vue';
 
@@ -8,6 +9,7 @@ import axios from 'axios';
 export default {
     data() {
         return {
+            store,
 
             cards: [],
 
@@ -17,7 +19,7 @@ export default {
     components: { AppCard },
 
     created() {
-        axios.get('http://localhost:3000/products').then((res) => {
+        axios.get(store.apiUri + '/products').then((res) => {
             console.log(res.data)
             this.cards = res.data
         })
