@@ -4,7 +4,7 @@
                 img: String,
                 brandName: String,
                 itemName: String,
-                priceValue: String
+                priceValue: Number
                 },
     };
 </script>
