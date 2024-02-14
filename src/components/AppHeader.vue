@@ -6,7 +6,7 @@
 
 <template>
     <header>
-        <div class="content-container">
+        <div class="header-container">
             <div class="header-section">
                 <div>
                     Donna
@@ -46,14 +46,15 @@
 
 <style lang="scss" scoped>
 
-    header{
-        font-size: small;
+    @use '../styles/partials/variables' as *;
 
+    header{
         color: white;
 
         background-color: orange;
         
-        .content-container {
+        .header-container {
+            height: $container-height;
             width: 80vw;
             margin: auto;
             display: flex;

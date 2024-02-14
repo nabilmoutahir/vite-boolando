@@ -1,8 +1,15 @@
 <script>
+
+    import AppCard from './AppCard.vue';
+
+    
     export default{
         data() {
             return {
                 
+                
+
+
                 cards: [
                     {
                     id: 1,
@@ -109,20 +116,42 @@
                 ],
 
             }
-        },      
+        }, 
+        
+        components: { AppCard },
+
     };
 </script>
 
 <template>
-    <div>
-        <div>
-            <div>
+    <main>
+        <div class="main-container">
+            
+            <AppCard 
+            v-for="card in cards" 
+            :img="'../src/assets/img/' + card.frontImage"
+            :brandName="card.brand"
+            :itemName="card.name"
+            :priceValue="card.price"
+            ></AppCard>
 
-            </div>
         </div>
-    </div>
+    </main>
 </template>
 
 <style scoped>
+
+    .main-container {
+        height: calc(100vh - 110px);
+        width: 80vw;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+
 
 </style>
