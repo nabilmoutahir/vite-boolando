@@ -1,6 +1,35 @@
 <script>
     export default{
+        data() {
+            return {
+                
+                clothingSection: [
+                    {
+                        section: 'Donna'
+                    },
+                    {
+                        section:'Uomo'
+                    },
+                    {
+                        section:'Bambini'
+                    }
+                ],
 
+                logo:'./src/assets/img/boolean-logo.png',
+
+                navSection: [
+                    {
+                        icon:'emoji'
+                    },
+                    {
+                        icon:'emoji'
+                    },
+                    {
+                        icon:'emoji'
+                    }
+                ]
+            }
+        },
     };
 </script>
 
@@ -8,35 +37,19 @@
     <header>
         <div class="header-container">
             <div class="header-section">
-                <div>
-                    Donna
-                </div>
-
-                <div>
-                    Uomo
-                </div>
-
-                <div>
-                    Bambini
+                <div v-for="clothing in clothingSection">
+                    {{ clothing.section }}
                 </div>
             </div>
     
 
             <div>
-                <img src="../assets/img/boolean-logo.png" alt="">
+                <img :src="logo" alt="">
             </div>
 
             <div class="header-section">
-                <div>
-                    emoji
-                </div>
-
-                <div>
-                    emoji
-                </div>
-
-                <div>
-                    emoji
+                <div v-for="nav in navSection">
+                    {{nav.icon}}
                 </div>
             </div>
         </div>

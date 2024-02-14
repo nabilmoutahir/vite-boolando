@@ -1,6 +1,40 @@
 <script>
     export default{
+        data() {
+            return {
+                
+                footerInfos:[
+                    {
+                        info:'Informazioni legali'
+                    },
+                    {
+                        info:'Informativa sulla privacy'
+                    },
+                    {
+                        info:'Diritto di recesso'
+                    }
+                ],
 
+                footerLinks:[
+                    {
+                        icon:'emoji'
+                    },
+                    {
+                        icon:'emoji'
+                    },
+                    {
+                        icon:'emoji'
+                    },
+                    {
+                        icon:'emoji'
+                    },
+                    {
+                        icon:'emoji'
+                    },
+                ]
+
+            }
+        },
     };
 </script>
 
@@ -13,16 +47,8 @@
                 </div>
 
                 <div class="footer-info">
-                    <div>
-                        Informazioni legali
-                    </div>
-
-                    <div>
-                        Informativa sulla privacy
-                    </div>
-
-                    <div>
-                        Diritto di recesso
+                    <div v-for="footerInfo in footerInfos">
+                        {{footerInfo.info}}
                     </div>
                 </div>
             </div>
@@ -33,24 +59,8 @@
                 </div>
 
                 <div class="footer-info">
-                    <div>
-                        emoji
-                    </div>
-
-                    <div>
-                        emoji
-                    </div>
-
-                    <div>
-                        emoji
-                    </div>
-
-                    <div>
-                        emoji
-                    </div>
-
-                    <div>
-                        emoji
+                    <div v-for="footerLink in footerLinks">
+                        {{footerLink.icon}}
                     </div>
                 </div>
             </div>
