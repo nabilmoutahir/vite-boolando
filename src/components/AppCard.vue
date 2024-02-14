@@ -17,7 +17,7 @@
             <img :src="img" alt="">
         </figure>
         
-        <div>
+        <div class="card-text">
             <div class="card-brand">
                 {{ brandName }}
             </div>
@@ -46,6 +46,10 @@
     img{
         width: 100%;
         object-fit: contain;
+    }
+
+    .card-text{
+        padding-top: 10px;
     }
 
     .card-brand {

@@ -7,9 +7,6 @@
         data() {
             return {
                 
-                
-
-
                 cards: [
                     {
                     id: 1,
