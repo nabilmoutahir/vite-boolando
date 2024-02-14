@@ -5,9 +5,40 @@
 </script>
 
 <template>
+    <div>
+        <div>
+            Donna
+        </div>
 
+        <div>
+            Uomo
+        </div>
+
+        <div>
+            Bambini
+        </div>
+    </div>
+    
+
+    <div>
+        logo
+    </div>
+
+    <div>
+        <div>
+            emoji
+        </div>
+
+        <div>
+            emoji
+        </div>
+
+        <div>
+            emoji
+        </div>
+    </div>
 </template>
 
-<style>
+<style scoped>
 
 </style>
