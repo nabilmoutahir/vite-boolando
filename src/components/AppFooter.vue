@@ -17,19 +17,19 @@
 
                 footerLinks:[
                     {
-                        icon:'emoji'
+                        icon:'fa-brands fa-twitter'
                     },
                     {
-                        icon:'emoji'
+                        icon:'fa-brands fa-facebook'
                     },
                     {
-                        icon:'emoji'
+                        icon:'fa-brands fa-instagram'
                     },
                     {
-                        icon:'emoji'
+                        icon:'fa-brands fa-pinterest'
                     },
                     {
-                        icon:'emoji'
+                        icon:'fa-brands fa-youtube'
                     },
                 ]
 
@@ -60,7 +60,7 @@
 
                 <div class="footer-info">
                     <div v-for="footerLink in footerLinks">
-                        {{footerLink.icon}}
+                        <a :class="footerLink.icon"></a>
                     </div>
                 </div>
             </div>

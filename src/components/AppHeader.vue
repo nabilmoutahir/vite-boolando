@@ -19,13 +19,13 @@
 
                 navSection: [
                     {
-                        icon:'emoji'
+                        icon: 'fa-regular fa-user'
                     },
                     {
-                        icon:'emoji'
+                        icon: 'fa-regular fa-heart'
                     },
                     {
-                        icon:'emoji'
+                        icon: 'fa-solid fa-bag-shopping'
                     }
                 ]
             }
@@ -49,7 +49,7 @@
 
             <div class="header-section">
                 <div v-for="nav in navSection">
-                    {{nav.icon}}
+                    <a :class="nav.icon"></a>
                 </div>
             </div>
         </div>
